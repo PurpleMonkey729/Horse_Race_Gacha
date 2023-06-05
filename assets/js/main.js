@@ -17,7 +17,10 @@ function choose(array, num) {
 }
 
 function click1() {
-    if(points < 500) return 0;
+    if(points < 500) {
+        alert("ポイント不足です！");
+        return 0;
+    }
     const rnd = Math.floor(Math.random() * 10);
     let tmp_rslt = [];
     if (rnd > 0) {
@@ -35,7 +38,10 @@ function click1() {
 }
 
 function click2() {
-    if(points < 1000) return 0;
+    if(points < 1000) {
+        alert("ポイント不足です！");
+        return 0;
+    }
     const rnd = Math.floor(Math.random() * 10);
     let tmp_rslt = [];
     if (rnd > 1) {
@@ -54,7 +60,10 @@ function click2() {
 }
 
 function click3() {
-    if(points < 2000) return 0;
+    if(points < 2000) {
+        alert("ポイント不足です！");
+        return 0;
+    }
     const rnd = Math.floor(Math.random() * 100);
     let tmp_rslt = [];
     if (rnd > 84) {
@@ -82,7 +91,10 @@ function click3() {
 }
 
 function click4() {
-    if(points < 30000) return 0;
+    if(points < 30000) {
+        alert("ポイント不足です！");
+        return 0;
+    }
     let tmp_rslt = [];
     tmp_rslt += "特定Ａ,";
     tmp_rslt += choose(array_SR, 1);
