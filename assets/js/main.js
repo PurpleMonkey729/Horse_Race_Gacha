@@ -4,7 +4,7 @@ const array_SR = ['クロノロジスト', 'ケイアイガーベラ', 'コイ�
 const array_UR = ['カレンブーケドール', 'サラキア', 'シンコウラブリイ', 'スティンガー', 'ソウルスターリング', 'ダンスインザムード', 'ダンスパートナー', 'テスコガビー', 'トゥザヴィクトリー', 'ニシノフラワー', 'ハープスター', 'ビリーヴ', 'ファインモーション', 'フサイチエアデール', 'ブチコ', 'ホクトベガ', 'ユキチャン', 'ルージュバック', 'レシステンシア', 'レッツゴードンキ'];
 const result = document.getElementById('result');
 const pts = document.getElementById('points');
-var points = 50000;
+var points = 100000;
 
 function choose(array, num) {
     let tmp_rslt = [];
@@ -31,7 +31,7 @@ function click1() {
         result.innerHTML = tmp_rslt.toString();
     }
     points -= 500;
-    pts.innerHTML = points + "pts";
+    pts.innerHTML = points + "pt";
 }
 
 function click2() {
@@ -50,7 +50,7 @@ function click2() {
         result.innerHTML = tmp_rslt.toString();
     }
     points -= 1000;
-    pts.innerHTML = points + "pts";
+    pts.innerHTML = points + "pt";
 }
 
 function click3() {
@@ -71,24 +71,24 @@ function click3() {
         result.innerHTML = tmp_rslt.toString();
     }
     else {
-        tmp_rslt += "Again";
+        tmp_rslt += "特定Ａ,";
         tmp_rslt += choose(array_SR, 1);
         tmp_rslt += choose(array_R, 2);
         tmp_rslt += choose(array_N, 6);
         result.innerHTML = tmp_rslt.toString();
     }
     points -= 2000;
-    pts.innerHTML = points + "pts";
+    pts.innerHTML = points + "pt";
 }
 
 function click4() {
-    if(points < 3000) return 0;
+    if(points < 30000) return 0;
     let tmp_rslt = [];
-    tmp_rslt += "Again,";
+    tmp_rslt += "特定Ａ,";
     tmp_rslt += choose(array_SR, 1);
     tmp_rslt += choose(array_R, 2);
     tmp_rslt += choose(array_N, 6);
     result.innerHTML = tmp_rslt.toString();
-    points -= 3000;
-    pts.innerHTML = points + "pts";
+    points -= 30000;
+    pts.innerHTML = points + "pt";
 }
